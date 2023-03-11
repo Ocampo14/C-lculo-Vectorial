@@ -1,0 +1,28 @@
+//Ocampo Ortiz Hiromi
+#include <iostream>
+#include <cmath> // Necesitamos esta librería para usar la función atan2()
+
+using namespace std;
+
+int main() {
+    double x, y, z, r, theta, z_cilindricas;
+    const double pi = 3.14159265358979323846; // Definimos la constante pi
+    
+    // Pedimos al usuario que ingrese las coordenadas rectangulares
+    cout << "Ingrese la coordenada x: ";
+    cin >> x;
+    cout << "Ingrese la coordenada y: ";
+    cin >> y;
+    cout << "Ingrese la coordenada z: ";
+    cin >> z;
+    
+    // Calculamos las coordenadas cilíndricas r, theta y z
+    r = sqrt(pow(x, 2) + pow(y, 2));
+    theta = atan2(y, x) * 180.0 / pi;
+    z_cilindricas = z;
+    
+    // Imprimimos las coordenadas cilíndricas en grados en la pantalla
+    cout << "Coordenadas cilindricas en grados: (r, theta, z) = (" << r << ", " << theta << "°, " << z_cilindricas << ")" << endl;
+    
+    return 0;
+}

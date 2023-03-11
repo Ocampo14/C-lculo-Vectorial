@@ -1,0 +1,27 @@
+//Ocampo Ortiz Hiromi
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double x1, y1, x2, y2, x_medio, y_medio;
+    
+    // Pedimos al usuario que ingrese las coordenadas de los dos puntos
+    cout << "Ingrese la coordenada x del primer punto: ";
+    cin >> x1;
+    cout << "Ingrese la coordenada y del primer punto: ";
+    cin >> y1;
+    cout << "Ingrese la coordenada x del segundo punto: ";
+    cin >> x2;
+    cout << "Ingrese la coordenada y del segundo punto: ";
+    cin >> y2;
+    
+    // Calculamos el punto medio usando las fórmulas correspondientes
+    x_medio = (x1 + x2) / 2;
+    y_medio = (y1 + y2) / 2;
+    
+    // Imprimimos las coordenadas del punto medio
+    cout << "El punto medio es: (" << x_medio << ", " << y_medio << ")" << endl;
+    
+    return 0;
+}

@@ -1,0 +1,32 @@
+//Ocampo Ortiz Hiromi
+#include <iostream>
+#include <cmath> // Necesitamos esta librería para usar las funciones sin(), cos() y sqrt()
+
+using namespace std;
+
+int main() {
+    double rho, theta_deg, phi_deg, x, y, z;
+    const double PI = 3.14159265358979323846; // Definimos la constante PI
+    
+    // Pedimos al usuario que ingrese las coordenadas esféricas en grados
+    cout << "Ingrese la coordenada rho: ";
+    cin >> rho;
+    cout << "Ingrese la coordenada theta en grados: ";
+    cin >> theta_deg;
+    cout << "Ingrese la coordenada phi en grados: ";
+    cin >> phi_deg;
+    
+    // Convertimos los ángulos a radianes
+    double theta = theta_deg * PI / 180.0;
+    double phi = phi_deg * PI / 180.0;
+    
+    // Calculamos las coordenadas rectangulares
+    x = rho * sin(phi) * cos(theta);
+    y = rho * sin(phi) * sin(theta);
+    z = rho * cos(phi);
+    
+    // Imprimimos las coordenadas rectangulares en la pantalla
+    cout << "Coordenadas rectangulares: (x, y, z) = (" << x << ", " << y << ", " << z << ")" << endl;
+    
+    return 0;
+}

@@ -1,0 +1,23 @@
+//Ocampo Ortiz Hiromi
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    float r, theta, x, y;
+    
+    cout << "Introduce el valor de r: ";
+    cin >> r;
+    
+    cout << "Introduce el valor de theta en radianes: ";
+    cin >> theta;
+    
+    x = r * cos(theta);
+    y = r * sin(theta);
+    
+    cout << "Las coordenadas rectangulares son: (" << x << ", " << y << ")" << endl;
+    
+    return 0;
+}

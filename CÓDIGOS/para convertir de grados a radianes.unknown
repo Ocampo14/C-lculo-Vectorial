@@ -1,0 +1,19 @@
+//Ocampo Ortiz Hiromi
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    float grados, radianes;
+    
+    cout << "Introduce el valor en grados: ";
+    cin >> grados;
+    
+    radianes = grados * M_PI / 180.0;
+    
+    cout << grados << " grados son " << radianes << " radianes." << endl;
+    
+    return 0;
+}

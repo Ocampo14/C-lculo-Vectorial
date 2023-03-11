@@ -1,0 +1,27 @@
+//Ocampo Ortiz Hiromi
+#include <iostream>
+#include <cmath> // Necesitamos esta librería para usar la constante PI
+
+using namespace std;
+
+int main() {
+    double rho, theta, z, phi;
+    const double PI = 3.14159265358979323846; // Definimos la constante PI
+    
+    // Pedimos al usuario que ingrese las coordenadas cilíndricas en radianes
+    cout << "Ingrese la coordenada rho: ";
+    cin >> rho;
+    cout << "Ingrese la coordenada theta: ";
+    cin >> theta;
+    cout << "Ingrese la coordenada z: ";
+    cin >> z;
+    
+    // Calculamos las coordenadas esféricas
+    phi = atan2(z, rho);
+    rho = sqrt(pow(rho, 2) + pow(z, 2));
+    
+    // Imprimimos las coordenadas esféricas en la pantalla
+    cout << "Coordenadas esfericas: (rho, theta, phi) = (" << rho << ", " << theta << " radianes, " << phi << ")" << endl;
+    
+    return 0;
+}

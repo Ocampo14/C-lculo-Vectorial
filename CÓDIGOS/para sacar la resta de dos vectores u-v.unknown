@@ -1,0 +1,35 @@
+//Ocampo Ortiz Hiromi
+#include <iostream>
+#include <vector> // Necesitamos esta librería para usar vectores
+using namespace std;
+
+int main() {
+    vector<double> u(3), v(3), resta(3);
+    
+    // Pedimos al usuario que ingrese los elementos de los vectores
+    cout << "Ingrese los elementos del vector u:" << endl;
+    for(int i = 0; i < 3; i++) {
+        cout << "Elemento " << i+1 << ": ";
+        cin >> u[i];
+    }
+    cout << "Ingrese los elementos del vector v:" << endl;
+    for(int i = 0; i < 3; i++) {
+        cout << "Elemento " << i+1 << ": ";
+        cin >> v[i];
+    }
+    
+    // Calculamos la resta de los vectores
+    for(int i = 0; i < 3; i++) {
+        resta[i] = u[i] - v[i];
+    }
+    
+    // Imprimimos la resta en la pantalla
+    cout << "La resta de los vectores u y v es: (";
+    for(int i = 0; i < 3; i++) {
+        cout << resta[i];
+        if(i != 2) cout << ", ";
+    }
+    cout << ")" << endl;
+    
+    return 0;
+}
